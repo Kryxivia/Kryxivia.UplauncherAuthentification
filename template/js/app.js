@@ -237,8 +237,8 @@ window.addEventListener('load', async () => {
   initialize({
     // Configuration:
     authenticationTokenParamName: 'auth-token',
-    authApiUrl: 'https://kryx-app-auth-api.azurewebsites.net/api/v1/login',
-    authenticationPayload: '{ "publicKey": "$publicKey", "signature": "$signature", "authToken": "$authToken" }',
+    authApiUrl: 'https://kryx-app-auth-api.azurewebsites.net/api/v1/login/token_auth',
+    authenticationPayload: '{ "publicKey": "$publicKey", "signature": "$signature", "temporaryAuthToken": "$authToken" }',
     callBackWhenLoginSuccess: (response) => {
       console.log('Login Success', JSON.parse(response));
     },
