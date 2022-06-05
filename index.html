@@ -1,0 +1,110 @@
+<html>
+  <head>
+    <title>Kryxivia Uplauncher Authentication</title>
+    <meta name="theme-color" content="#843eef">
+    <meta name="msapplication-TileColor" content="#843eef">
+    <link rel="icon" type="image/png" href="/template/img/favicon.png">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <!-- Get some bootstrap default styles -->
+    <link rel="stylesheet" href="./template/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./template/css/app.css">
+    <style>
+      body {
+        background: radial-gradient(50% 50% at 50% 50%, #af32c3 0%, #4d0c57 100%);
+        background-size: cover;
+      }
+      .elfUuK {
+        max-width: inherit!important;
+        /* position: absolute!important; */
+      }
+      .login-zone {
+        top: 50vh;
+        left: 50vw;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        width: 100%;
+      }
+      .logo-zone {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 22px;
+      }
+    </style>
+  </head>
+  <body id="main">
+
+    <!-- LOGIN -->
+    <div class="login-zone">
+      <div id="logo-zone" class="logo-zone">
+        <img src="/template/img/logo-kryxivia.png" width="250" height="95" >
+      </div>
+      <div id="logo-suite" style="display: none;justify-content: center;">
+        <span style="display: block;margin:5px;color: white;">
+          Authentication Service
+        </span>
+      </div>
+      <div id="login" style="display: none;">
+        <div style="display: flex;justify-content: center;">
+          <button id="login-btn" class="bn bn-large" id="btn-connect" onclick="onConnect();">
+            <svg height="50" width="158">
+              <text x="0" y="35" fill="white" style="font-size: 2em;">SIGN-IN</text>
+            </svg>
+            <img id="login-btn-bsc-logo" src="./template/img/bsc.png" style="width: 40px;
+            position: absolute;
+            right: 15px;" />
+            <div id="login-btn-spinner" style="display:none;position: absolute;right: 19px;top:13px">
+              <span class="spinner-border" style="color: #f0b909;"><span class="sr-only">Loading... </span></span>
+            </div>
+          </button>
+        </div>
+        <div id="login-select-message" style="display: flex;justify-content: center;">
+          <span style="display: block;margin:30px;color: white;">
+            Please select a wallet to connect to our dapps.
+          </span>
+        </div>
+        <div id="login-error-message" style="display: none;justify-content: center;">
+          <span style="display: block;margin:30px;color: red;text-align: center;">
+            Error the authentication server is not online. Please try again later.
+          </span>
+        </div>
+      </div>
+      <div id="logged" style="display: none;">
+        <div style="display: flex;justify-content: center;">
+          <button id="login-btn" class="bn bn-large" id="btn-connect" disabled="true">
+            <svg height="50" width="198">
+              <text x="0" y="35" fill="white" style="font-size: 2em;">CONNECTED</text>
+            </svg>
+          </button>
+        </div>
+        <div style="display: flex;justify-content: center;">
+          <span style="display: block;margin:30px;color: white;">
+            You are now connected. You can close this window and return to the application.
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Get Alpha -->
+    <div id="box-message" style="display:none;position: absolute;z-index: 1000;background-color: #252227;width: 500px;left: calc(50% - 250px);top: calc(50vh - 100px);text-align: center;border-radius: 10px;">
+      <div class="" id="box-data" style="margin-top:20px;padding: 10px;color: #970e0e;">
+      </div>
+      <button class="" id="alpha-access" style="margin-top:10px;margin-bottom:10px;background-color: #734697;border: 2px solid #2d083d;padding: 10px;color: #f8f6f6;">
+        Get Alpha Access
+      </button>
+      <button class="" id="close-box-message" style="position:absolute;right: 5px;top: 0px;color: #8b31fb;transform: scaleY(0.8);font-size: 25px;">
+        x
+      </button>
+    </div>
+
+    <script type="text/javascript" src="./template/js/minified/web3.min.js"></script>
+    <script type="text/javascript" src="./template/js/minified/web3modal.js"></script>
+    <script type="text/javascript" src="./template/js/minified/evm-chains.min.js"></script>
+    <script type="text/javascript" src="./template/js/minified/walletconnect-web3-provider.min.js"></script>
+    <script type="text/javascript" src="./template/js/minified/fortmatic.js"></script>
+    <script type="text/javascript" src="./template/js/http-client.js"></script>
+    <script type="text/javascript" src="./template/js/app.js"></script>
+    
+  </body>
+</html>
