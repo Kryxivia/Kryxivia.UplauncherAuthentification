@@ -3,6 +3,8 @@ var http = require('http');
 var url = require('url');
 var ROOT_DIR = "./";
 
+const PORT = process.env.PORT || 3000;
+
 var mimeTypes ={
 	"js":"text/javascript",
 	"json":"text/data",
@@ -13,6 +15,7 @@ var mimeTypes ={
 	"br": "text/javascript",
     "wasm": "application/wasm"
 }
+
 http.createServer( function( req, res ) {
 	if (req.url.split('?')[0] == '/') {
 		req.url = '/index.html';
@@ -39,5 +42,5 @@ http.createServer( function( req, res ) {
 		}
 		res.end(data);
 	} )
-}).listen( 80 );
-console.log( "listening on port 80" );
+}).listen( PORT );
+console.log( "listening on port " + PORT );
