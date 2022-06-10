@@ -1,0 +1,25 @@
+{
+  "name": "kryxivia.uplauncherauthentification",
+  "version": "1.0.0",
+  "description": "Front-end for Kryxivia uplauncher auth",
+  "main": "http_server.js",
+  "scripts": {
+    "start": "node http_server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kryxivia/Kryxivia.UplauncherAuthentification.git"
+  },
+  "author": "Kryxivia Team",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kryxivia/Kryxivia.UplauncherAuthentification/issues"
+  },
+  "homepage": "https://github.com/Kryxivia/Kryxivia.UplauncherAuthentification#readme",
+  "dependencies": {
+    "fs": "0.0.1-security",
+    "http": "0.0.1-security",
+    "url": "^0.11.0"
+  }
+}
