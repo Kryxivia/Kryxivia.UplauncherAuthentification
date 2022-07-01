@@ -173,7 +173,6 @@ async function fetchAccountData() {
   selectedAccount = accounts[0];
   try {
     document.getElementById('login-btn-spinner').style.display = 'block';
-    document.getElementById('login-btn-bsc-logo').style.display = 'none';
 
     const signedMessage = await web3.eth.personal.sign("I agree to connect my wallet to Kryxivia.", selectedAccount, "");
     console.log(signedMessage);
@@ -203,12 +202,10 @@ async function fetchAccountData() {
         }
         console.error(err);
         document.getElementById('login-btn-spinner').style.display = 'none';
-        document.getElementById('login-btn-bsc-logo').style.display = 'block';
       }
       ]);
   } catch (e) {
     document.getElementById('login-btn-spinner').style.display = 'none';
-    document.getElementById('login-btn-bsc-logo').style.display = 'block';
     document.getElementById('login-btn').removeAttribute('disabled');
   }
 }
