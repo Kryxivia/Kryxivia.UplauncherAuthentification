@@ -177,7 +177,7 @@ async function fetchAccountData() {
     const signedMessage = await web3.eth.personal.sign("I agree to connect my wallet to Kryxivia.", selectedAccount, "");
     console.log(signedMessage);
     document.HttpClient.post({
-        url: `https://kryx-app-auth-api.azurewebsites.net/api/v1/login`,
+        url: configuration.authApiUrl,
         headers: {
             "Content-Type": "application/json"
         },
@@ -234,7 +234,7 @@ window.addEventListener('load', async () => {
   initialize({
     // Configuration:
     authenticationTokenParamName: 'auth-token',
-    authApiUrl: 'https://kryx-app-auth-api.azurewebsites.net/api/v1/login/token_auth',
+    authApiUrl: 'https://kryx-app-auth-api.azurewebsites.net/api/v1/login',
     authenticationPayload: '{ "publicKey": "$publicKey", "signature": "$signature", "temporaryAuthToken": "$authToken" }',
     callBackWhenLoginSuccess: (response) => {
       console.log('Login Success', JSON.parse(response));
