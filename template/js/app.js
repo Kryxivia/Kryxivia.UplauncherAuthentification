@@ -192,7 +192,7 @@ async function fetchAccountData() {
         document.getElementById('logged').style.display = 'block';
       },
       (err) => {
-        configuration.callBackWhenLoginSuccess(err);
+        configuration.callBackWhenLoginFail(err);
         if (err.status == 500 && err.response) {
           let resp = JSON.parse(err.response);
           displayError(resp.errorMessage);
